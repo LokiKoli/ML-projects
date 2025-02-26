@@ -17,5 +17,3 @@ jobs:
       - run: |
           git tag ${{ github.event.inputs.version }} --force
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} ${{ github.event.inputs.version }} --force
-    permissions:
-      contents: write
